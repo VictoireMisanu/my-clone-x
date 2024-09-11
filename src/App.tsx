@@ -4,7 +4,8 @@ import Item from "./components/RightSide/Items/Item"
 import RightSide from "./components/RightSide/RightSide"
 import NavComponent from "./components/SideNav/NavComponent/NavComponent"
 import SideNav from "./components/SideNav/SideNav"
-import Text from "./components/Text/Text"
+import Title from "./components/Title/Title"
+import ItemsContent from "./components/RightSide/ItemsContent"
 
 
 
@@ -29,10 +30,11 @@ function App() {
           <NavComponent src="/logo/search.svg"/>
           <Btn type="input" id="SearchZone" placeholder="Search Twitter" className="bg-Bg2"/>
         </Item>
-        <Item className="flex flex-row bg-Bg2 w-80 p-3 justify-between rounded-xl">
-          <Text text="Trends for you" className="text-white text-sm font-bold"/>
-          <NavComponent src="/logo/settings.svg"/>
+        <Item className="flex flex-col bg-Bg2 w-80 p-3 justify-between rounded-xl">
+          <Title/>
+          <ItemsContent/>
         </Item>
+       
       </RightSide>
     </div>
   )
