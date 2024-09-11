@@ -6,7 +6,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors:{
+        'TweetBtn':'#1C9BF1',
+        'Bg1': '#000000'
+      }
+    },
   },
   plugins: [],
 }
