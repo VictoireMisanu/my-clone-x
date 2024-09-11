@@ -1,10 +1,10 @@
-interface SideNavProps {
+interface RightSideItemsProps {
     className?:string;
     children: JSX.Element | JSX.Element[]
 }
 
 
-function SideNav ({className, children}:SideNavProps){
+function Item ({className, children}:RightSideItemsProps){
     return(
         <div className={className}>
             {children}
@@ -12,4 +12,4 @@ function SideNav ({className, children}:SideNavProps){
     )
 }
 
-export default SideNav
+export default Item
