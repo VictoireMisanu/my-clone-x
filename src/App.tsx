@@ -6,6 +6,7 @@ import NavComponent from "./components/SideNav/NavComponent/NavComponent"
 import SideNav from "./components/SideNav/SideNav"
 import Title from "./components/Title/Title"
 import ItemsContent from "./components/RightSide/ItemsContent"
+import Text from "./components/Text/Text"
 
 
 
@@ -33,6 +34,16 @@ function App() {
         <Item className="flex flex-col bg-Bg2 w-80 p-3 justify-between rounded-xl">
           <Title/>
           <ItemsContent/>
+          <ItemsContent/>
+          <ItemsContent/>
+          <ItemsContent/>
+          <a href="#"><Text className="text-TweetBtn text-xl" text="Show more"/></a>
+
+        </Item>
+        <Item className="flex flex-col bg-Bg2 w-80 p-3 justify-between rounded-xl">
+          <Title/>
+          <ItemsContent/>
+
         </Item>
        
       </RightSide>
