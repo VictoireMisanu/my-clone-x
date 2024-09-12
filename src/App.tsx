@@ -9,6 +9,8 @@ import ItemsContent from "./components/RightSide/ItemsContent"
 import Text from "./components/Text/Text"
 import WhoBlock from "./components/RightSide/WhoItems/WhoBlock"
 import TextPlusIcon from "./components/RightSide/WhoItems/WhoText"
+import MiddleSection from "./components/MiddleSection/MiddleSection"
+import Header from "./components/MiddleSection/Header/Header"
 
 
 
@@ -16,7 +18,7 @@ function App() {
 
   return (
     <div className="bg-Bg1 flex flex-row">
-      <SideNav className="flex flex-col px-10 mx-10 py-7 gap-5">
+      <SideNav className="flex flex-col px-5 py-7 gap-5">
           <NavComponent src="/logo/twitter.svg"/>
           <NavComponent src="/logo/logoHome.svg" text="Home"/>
           <NavComponent src="/logo/explore.svg" text="Explore"/>
@@ -28,7 +30,11 @@ function App() {
           <NavComponent src="/logo/more.svg" text="More"/>
           <Btn type="button" id="BtnTweet" value="Tweet" className="text-xl text-white bg-TweetBtn rounded-2xl w-36 h-10"/>
       </SideNav>
-      <RightSide className="flex flex-col px-10 mx-10 py-7 gap-5">
+      <MiddleSection className="w-7/12 mx-3 border-2 border-white">
+        <Header />
+        <hr className="w-full border-gray-600"/>
+      </MiddleSection>
+      <RightSide className="flex flex-col px-5 py-7 gap-5">
         <Item className="flex flex-row bg-Bg2 w-80 p-3 rounded-3xl">
           <NavComponent src="/logo/search.svg"/>
           <Btn type="input" id="SearchZone" placeholder="Search Twitter" className="bg-Bg2"/>
