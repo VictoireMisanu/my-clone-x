@@ -12,6 +12,10 @@ import TextPlusIcon from "./components/RightSide/WhoItems/WhoText"
 import MiddleSection from "./components/MiddleSection/MiddleSection"
 import Header from "./components/MiddleSection/Header/Header"
 import EditTweet from "./components/MiddleSection/EditTweet/EditTweet"
+import Tweet from "./components/MiddleSection/Tweet/Tweet"
+import CommentSection from "./components/MiddleSection/Tweet/CommentSection"
+import NameText from "./components/MiddleSection/Tweet/NameText"
+import ImageTweet from "./components/MiddleSection/Tweet/ImageTweet"
 
 
 
@@ -19,7 +23,7 @@ function App() {
 
   return (
     <div className="bg-Bg1 flex flex-row">
-      <SideNav className="flex flex-col px-5 py-7 gap-5">
+      <SideNav className="flex flex-col px-10 py-7 gap-5">
           <NavComponent src="/logo/twitter.svg"/>
           <NavComponent src="/logo/logoHome.svg" text="Home"/>
           <NavComponent src="/logo/explore.svg" text="Explore"/>
@@ -35,6 +39,67 @@ function App() {
         <Header />
         <hr className="w-full border-gray-600"/>
         <EditTweet/>
+        <hr className="w-full border-gray-600"/>
+        <Tweet className="flex flex-col p-5">
+            <NameText>
+              <div className="w-36 h-36">
+                  <NavComponent src="/logo/cnn.svg"/>
+              </div>
+              <div className="flex flex-col gap-2">
+                    <div className="flex flex-row gap-1">
+                        <Text text="CNN" className="font-semibold text-gray-200"/>
+                        <NavComponent src="/logo/verified.svg"/>
+                        <Text text="@CNN" className="font-extralight text-gray-500"/>
+                        <Text text=".7min" className="font-extralight text-gray-500"/>
+                    </div>
+                    <div>
+                        <Text text='President Joe Biden touted a new agreement reached with the European Union to ease Trump-era tariffs on aluminum and steel as a "major breakthrough" that would serve to both strengthen the US steel industry and combat the global climate crisis.' className="font-light text-gray-300"/>
+                    </div> 
+                </div>
+            </NameText>
+            <CommentSection/>
+        </Tweet>
+        <hr className="w-full border-gray-600"/>
+        <Tweet className="flex flex-col p-5">
+            <NameText>
+              <div className="w-36 h-36">
+                  <NavComponent src="/logo/anytime.svg"/>
+              </div>
+              <div className="flex flex-col gap-2">
+                    <div className="flex flex-row gap-1">
+                        <Text text="CNN" className="font-semibold text-gray-200"/>
+                        <NavComponent src="/logo/verified.svg"/>
+                        <Text text="@CNN" className="font-extralight text-gray-500"/>
+                        <Text text=".7min" className="font-extralight text-gray-500"/>
+                    </div>
+                    <div>
+                        <Text text='President Joe Biden touted a new agreement reached with the European Union to ease Trump-era tariffs on aluminum and steel as a "major breakthrough" that would serve to both strengthen the US steel industry and combat the global climate crisis.' className="font-light text-gray-300"/>
+                    </div> 
+                </div>
+            </NameText>
+            <ImageTweet src="/images/imagetweet.png"/>
+            <CommentSection/>
+        </Tweet>
+        <hr className="w-full border-gray-600"/>
+        <Tweet className="flex flex-col p-5">
+            <NameText>
+              <div className="w-36 h-36">
+                  <NavComponent src="/logo/cnn.svg"/>
+              </div>
+              <div className="flex flex-col gap-2">
+                    <div className="flex flex-row gap-1">
+                        <Text text="CNN" className="font-semibold text-gray-200"/>
+                        <NavComponent src="/logo/verified.svg"/>
+                        <Text text="@CNN" className="font-extralight text-gray-500"/>
+                        <Text text=".7min" className="font-extralight text-gray-500"/>
+                    </div>
+                    <div>
+                        <Text text='President Joe Biden touted a new agreement reached with the European Union to ease Trump-era tariffs on aluminum and steel as a "major breakthrough" that would serve to both strengthen the US steel industry and combat the global climate crisis.' className="font-light text-gray-300"/>
+                    </div> 
+                </div>
+            </NameText>
+            <CommentSection/>
+        </Tweet>
         <hr className="w-full border-gray-600"/>
       </MiddleSection>
       <RightSide className="flex flex-col px-5 py-7 gap-5">
