@@ -5,7 +5,7 @@ function EditTweet (){
        <div className="flex flex-col gap-5 mx-5 my-3">
             <div className="flex flex-row gap-9 items-center w-3/5 h-10">
                 <a href="#"><img src="/logo/profilepic.svg" alt=""/></a> 
-                <Btn type="input" id="EditTweet" placeholder="What's happening?" className="bg-black text-white w-4/5 placeholder:text-2xl"/>
+                <Btn type="input" id="EditTweet" placeholder="What's happening?" className="bg-black text-white w-4/5 placeholder:text-2xl outline-none"/>
             </div>
             <div className="flex flex-row justify-between items-center h-10">
                 <div className="flex flex-row ml-20 gap-2">
