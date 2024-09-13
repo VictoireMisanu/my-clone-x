@@ -5,7 +5,7 @@ interface ImageTweetProps{
 
 function ImageTweet({src}:ImageTweetProps){
     return(
-            <div>
+            <div className="flex justify-center mb-5">
                 <img src={src} alt="" />
             </div>
     )
