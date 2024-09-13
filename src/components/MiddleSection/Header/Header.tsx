@@ -1,8 +1,3 @@
-
-
-
-
-
 function Header (){
     return(
        <div className="flex gap-1 flex-col mx-5 my-3">

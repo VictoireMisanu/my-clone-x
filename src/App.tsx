@@ -11,6 +11,7 @@ import WhoBlock from "./components/RightSide/WhoItems/WhoBlock"
 import TextPlusIcon from "./components/RightSide/WhoItems/WhoText"
 import MiddleSection from "./components/MiddleSection/MiddleSection"
 import Header from "./components/MiddleSection/Header/Header"
+import EditTweet from "./components/MiddleSection/EditTweet/EditTweet"
 
 
 
@@ -30,8 +31,10 @@ function App() {
           <NavComponent src="/logo/more.svg" text="More"/>
           <Btn type="button" id="BtnTweet" value="Tweet" className="text-xl text-white bg-TweetBtn rounded-2xl w-36 h-10"/>
       </SideNav>
-      <MiddleSection className="w-7/12 mx-3 border-2 border-white">
+      <MiddleSection className="w-7/12 mx-3 border-r-2 border-l-2 border-gray-600">
         <Header />
+        <hr className="w-full border-gray-600"/>
+        <EditTweet/>
         <hr className="w-full border-gray-600"/>
       </MiddleSection>
       <RightSide className="flex flex-col px-5 py-7 gap-5">
