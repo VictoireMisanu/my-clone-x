@@ -14,8 +14,7 @@ import Header from "./components/MiddleSection/Header/Header"
 import EditTweet from "./components/MiddleSection/EditTweet/EditTweet"
 import Tweet from "./components/MiddleSection/Tweet/Tweet"
 import CommentSection from "./components/MiddleSection/Tweet/CommentSection"
-import NameText from "./components/MiddleSection/Tweet/NameText"
-import ImageTweet from "./components/MiddleSection/Tweet/ImageTweet"
+
 import User from "./components/SideNav/User/User"
 
 
@@ -46,66 +45,19 @@ function App() {
         <hr className="w-full border-gray-600"/>
         <EditTweet/>
         <hr className="w-full border-gray-600"/>
-        <Tweet className="flex flex-col p-5">
-            <NameText>
-              <div className="w-36 h-36">
-                  <NavComponent src="/logo/cnn.svg"/>
-              </div>
-              <div className="flex flex-col gap-2">
-                    <div className="flex flex-row gap-1">
-                        <Text text="CNN" className="font-semibold text-gray-200"/>
-                        <NavComponent src="/logo/verified.svg"/>
-                        <Text text="@CNN" className="font-extralight text-gray-500"/>
-                        <Text text=".7min" className="font-extralight text-gray-500"/>
-                    </div>
-                    <div>
-                        <Text text='President Joe Biden touted a new agreement reached with the European Union to ease Trump-era tariffs on aluminum and steel as a "major breakthrough" that would serve to both strengthen the US steel industry and combat the global climate crisis.' className="font-light text-gray-300"/>
-                    </div> 
-                </div>
-            </NameText>
-            <CommentSection/>
+        <Tweet publisherName="CNN" username="CNN" date="7min" avatarUrl="/logo/cnn.svg" content='President Joe Biden touted a new agreement reached with the European Union to ease Trump-era tariffs on aluminum and steel as a "major breakthrough" that would serve to both strengthen the US steel industry and combat the global climate crisis.'>
+          <CommentSection likes={122} comments={22} retweets={55} share={0}/>
+        </Tweet>
+            
+        <hr className="w-full border-gray-600"/>
+        <Tweet publisherName="The New York Times" username="anytimes" date="2h" avatarUrl="/logo/anytime.svg" content='Gardening boomed during the pandemic. Six Black writers share how it has helped them re-establish, and reimagine, a connection to cultivation and the land' imageUrl="/images/imagetweet.png">
+          <CommentSection likes={482} comments={19} retweets={482} share={0}/>
         </Tweet>
         <hr className="w-full border-gray-600"/>
-        <Tweet className="flex flex-col p-5">
-            <NameText>
-              <div className="w-36 h-36">
-                  <NavComponent src="/logo/anytime.svg"/>
-              </div>
-              <div className="flex flex-col gap-2">
-                    <div className="flex flex-row gap-1">
-                        <Text text="Twitter" className="font-semibold text-gray-200"/>
-                        <NavComponent src="/logo/verified.svg"/>
-                        <Text text="@Twitter" className="font-extralight text-gray-500"/>
-                        <Text text=".Oct 29" className="font-extralight text-gray-500"/>
-                    </div>
-                    <div>
-                        <Text text='President Joe Biden touted a new agreement reached with the European Union to ease Trump-era tariffs on aluminum and steel as a "major breakthrough" that would serve to both strengthen the US steel industry and combat the global climate crisis.' className="font-light text-gray-300"/>
-                    </div> 
-                </div>
-            </NameText>
-            <ImageTweet src="/images/imagetweet.png"/>
-            <CommentSection/>
+        <Tweet publisherName="Twitter" username="Twitter" date="Oct 29" avatarUrl="/logo/twitterblue.svg" content='President Joe Biden touted a new agreement reached with the European Union to ease Trump-era tariffs on aluminum and steel as a "major breakthrough" that would serve to both strengthen the US steel industry and combat the global climate crisis.'>
+          <CommentSection likes={122} comments={22} retweets={55} share={65}/>
         </Tweet>
-        <hr className="w-full border-gray-600"/>
-        <Tweet className="flex flex-col p-5">
-            <NameText>
-              <div className="w-36 h-36">
-                  <NavComponent src="/logo/twitterblue.svg"/>
-              </div>
-              <div className="flex flex-col gap-2">
-                    <div className="flex flex-row gap-1">
-                        <Text text="Twitter" className="font-semibold text-gray-200"/>
-                        <NavComponent src="/logo/verified.svg"/>
-                        <Text text="@Twitter" className="font-extralight text-gray-500"/>
-                        <Text text=".7min" className="font-extralight text-gray-500"/>
-                    </div>
-                    <div>
-                        <Text text='President Joe Biden touted a new agreement reached with the European Union to ease Trump-era tariffs on aluminum and steel as a "major breakthrough" that would serve to both strengthen the US steel industry and combat the global climate crisis.' className="font-light text-gray-300"/>
-                    </div> 
-                </div>
-            </NameText>
-            <CommentSection/>
-        </Tweet>
+        
 
       </MiddleSection>
       <RightSide className="flex flex-col px-5 py-7 gap-5">

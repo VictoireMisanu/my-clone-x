@@ -1,5 +1,5 @@
 interface TextProps{
-    text:string;
+    text:string | number;
     className?:string;
 }
 
