@@ -54,13 +54,15 @@ function App() {
           <CommentSection likes={482} comments={19} retweets={482} share={0}/>
         </Tweet>
         <hr className="w-full border-gray-600"/>
-        <Tweet publisherName="Twitter" username="Twitter" date="Oct 29" avatarUrl="/logo/twitterblue.svg" content='President Joe Biden touted a new agreement reached with the European Union to ease Trump-era tariffs on aluminum and steel as a "major breakthrough" that would serve to both strengthen the US steel industry and combat the global climate crisis.'>
+        <Tweet publisherName="Twitter" username="Twitter" date="Oct 4" avatarUrl="/logo/twitterblue.svg" content='Hello litterally everyone'>
           <CommentSection likes={122} comments={22} retweets={55} share={65}/>
         </Tweet>
-        
-
+        <hr className="w-full border-gray-600"/>
+        <Tweet publisherName="Twitter" username="Twitter" date="Oct 4" avatarUrl="/logo/twitterblue.svg" content='Hello litterally everyone'>
+          <CommentSection likes={122} comments={22} retweets={55} share={65}/>
+        </Tweet>
       </MiddleSection>
-      <RightSide className="flex flex-col px-5 py-7 gap-5">
+      <RightSide className="hidden lg:flex flex-col px-5 py-7 gap-5">
         <Item className="flex flex-row bg-Bg2 w-80 p-3 rounded-3xl">
           <NavComponent src="/logo/search.svg"/>
           <Btn type="input" id="SearchZone" placeholder="Search Twitter" className="bg-Bg2 outline-none text-white"/>

@@ -8,7 +8,7 @@ interface WhoBlockProps{
 
 function NameText({children}:WhoBlockProps){
     return(
-            <div className="flex flex-row gap-5">
+            <div className="flex flex-col">
                 {children}
             </div>
     )
