@@ -10,7 +10,7 @@ interface WhoBlockProps{
 
 function WhoBlock({children}:WhoBlockProps){
     return(
-            <div className="flex flex-row items-center my-3 ">
+            <div className="flex flex-row items-center justify-around my-3 ">
                 {children}
 
             </div>

@@ -7,7 +7,7 @@ interface TextPlusIconProps{
 
 function TextPlusIcon({children}:TextPlusIconProps){
     return(
-            <div className="flex flex-row gap-3">
+            <div className="flex flex-row gap-1 w-full">
                 {children}
             </div>
     )
