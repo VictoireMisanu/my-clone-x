@@ -36,7 +36,7 @@ function App() {
                   <NavComponent src="/logo/message.svg" text="Message"/>
                   <NavComponent src="/logo/bookMark.svg" text="BookMark"/>
                   <NavComponent src="/logo/list.svg" text="List"/>
-                  <NavLink to="/YourProfile"><NavComponent src="/logo/profile.svg" text="Profile"/></NavLink>
+                  <NavLink to="/profile"><NavComponent src="/logo/profile.svg" text="Profile"/></NavLink>
                   <NavComponent src="/logo/more.svg" text="More"/>
                   <Btn type="button" id="BtnTweet" value="Tweet" className="text-xl text-white bg-TweetBtn rounded-2xl w-36 h-10"/>
                 </div>
