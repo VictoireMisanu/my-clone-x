@@ -17,6 +17,7 @@ import CommentSection from "./components/MiddleSection/Tweet/CommentSection"
 import User from "./components/SideNav/User/User"
 import { BrowserRouter, NavLink, Route, Routes } from "react-router-dom"
 import ProfileInfo from "./components/Pages/ProfileInfo"
+import ProfileHeader from "./components/ProfileHeader/ProfileHeader"
 
 
 
@@ -26,7 +27,7 @@ function App() {
   return (
     
   <BrowserRouter>
-    <div className="bg-Bg1 flex flex-row">
+    <div className="bg-Bg1 flex flex-row justify-center">
         <SideNav className="mx-10 flex flex-col justify-between mb-3">
                 <div className="flex flex-col px-10 py-7 gap-5 justify-between">
                   <NavComponent src="/logo/twitter.svg"/>
@@ -72,10 +73,8 @@ function App() {
               }/>
             </Route>
           <Route path="/profile" element={
-            <ProfileInfo className="w-7/12 mx-3 border-r-2 border-l-2 border-gray-600">
-              <div>
-                <h1 className="text-extrabold text-TweetBtn">Welcome</h1>
-              </div>
+            <ProfileInfo className="w-5/12 mx-3 border-r-2 border-l-2 border-gray-600">
+                <ProfileHeader/>
             </ProfileInfo>} />
         </Routes>
         <RightSide className="hidden lg:flex flex-col px-5 py-7 gap-5">
