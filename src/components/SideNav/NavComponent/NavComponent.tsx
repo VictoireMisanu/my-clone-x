@@ -1,5 +1,5 @@
 interface PropsNavComponent{
-    src:string;
+    src?:string;
     alt?:string;
     text?:string;
     className?:string;

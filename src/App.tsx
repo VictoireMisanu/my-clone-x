@@ -18,6 +18,7 @@ import User from "./components/SideNav/User/User"
 import { BrowserRouter, NavLink, Route, Routes } from "react-router-dom"
 import ProfileInfo from "./components/Pages/ProfileInfo"
 import ProfileHeader from "./components/ProfileHeader/ProfileHeader"
+import Bg_ProfilePic from "./components/BgPic/BgPic"
 
 
 
@@ -29,7 +30,7 @@ function App() {
   <BrowserRouter>
     <div className="bg-Bg1 flex flex-row justify-center">
         <SideNav className="mx-10 flex flex-col justify-between mb-3">
-                <div className="flex flex-col px-10 py-7 gap-5 justify-between">
+                <div className="flex flex-col px-10 py-7 gap-8 justify-between">
                   <NavComponent src="/logo/twitter.svg"/>
                   <NavComponent src="/logo/logoHome.svg" text="Home"/>
                   <NavComponent src="/logo/explore.svg" text="Explore"/>
@@ -48,7 +49,7 @@ function App() {
         <Routes>
             <Route path="/">
               <Route index element={
-                  <MiddleSection className="w-7/12 mx-3 border-r-2 border-l-2 border-gray-600">
+                  <MiddleSection className="w-5/12 mx-3 border-r-2 border-l-2 border-gray-600">
                 <Header />
                 <hr className="w-full border-gray-600"/>
                 <EditTweet/>
@@ -75,6 +76,7 @@ function App() {
           <Route path="/profile" element={
             <ProfileInfo className="w-5/12 mx-3 border-r-2 border-l-2 border-gray-600">
                 <ProfileHeader/>
+                <Bg_ProfilePic/>
             </ProfileInfo>} />
         </Routes>
         <RightSide className="hidden lg:flex flex-col px-5 py-7 gap-5">

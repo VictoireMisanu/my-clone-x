@@ -10,7 +10,7 @@ export interface TweetProps {
     date: string;
     avatarUrl: string;
     content: string;
-    imageUrl?: string; // Nouvelle prop pour l’image
+    imageUrl?: string;
     children: JSX.Element | JSX.Element[]
     
 }
