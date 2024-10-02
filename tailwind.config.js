@@ -10,7 +10,8 @@ export default {
       colors:{
         'TweetBtn':'#1C9BF1',
         'Bg1': '#000000',
-        'Bg2': '#202327'
+        'Bg2': '#202327',
+        'BgProfil':'#333639'
       }
     },
   },

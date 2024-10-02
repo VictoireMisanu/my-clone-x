@@ -1,5 +1,4 @@
 
-import NavComponent from "../SideNav/NavComponent/NavComponent";
 interface BgImageProps{
     imageUrl?:string;
     
@@ -7,15 +6,11 @@ interface BgImageProps{
 export default function Bg_ProfilePic({imageUrl}:BgImageProps){
     return(
         <div>
-            <div className="text-white">
-            
-               { imageUrl ?
-                <NavComponent src={imageUrl} className="w-20 h-10 "/> 
-                
-                :
-                    "welcome"}
-            
-            </div>
+            { imageUrl ?
+                    <img src={imageUrl} className="w-full"/>
+                    
+                    :
+                    <div className="w-full h-60 bg-BgProfil"></div>}
            
         </div>
     )

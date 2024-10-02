@@ -49,7 +49,7 @@ function App() {
         <Routes>
             <Route path="/">
               <Route index element={
-                  <MiddleSection className="w-5/12 mx-3 border-r-2 border-l-2 border-gray-600">
+                  <MiddleSection className="w-5/12 mx-3 border-r-[1px] border-l-[1px] border-slate-700">
                 <Header />
                 <hr className="w-full border-gray-600"/>
                 <EditTweet/>
@@ -74,9 +74,9 @@ function App() {
               }/>
             </Route>
           <Route path="/profile" element={
-            <ProfileInfo className="w-5/12 mx-3 border-r-2 border-l-2 border-gray-600">
+            <ProfileInfo className="w-5/12 mx-3 border-r-[1px] border-l-[1px] border-slate-700">
                 <ProfileHeader/>
-                <Bg_ProfilePic/>
+                <Bg_ProfilePic imageUrl="/images/family.jpg"/>
             </ProfileInfo>} />
         </Routes>
         <RightSide className="hidden lg:flex flex-col px-5 py-7 gap-5">
