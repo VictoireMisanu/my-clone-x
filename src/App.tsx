@@ -19,6 +19,7 @@ import { BrowserRouter, NavLink, Route, Routes } from "react-router-dom"
 import ProfileInfo from "./components/Pages/ProfileInfo"
 import ProfileHeader from "./components/ProfileHeader/ProfileHeader"
 import Bg_ProfilePic from "./components/BgPic/BgPic"
+import ProfilePic from "./components/ProfilePic/ProfilePic"
 
 
 
@@ -76,7 +77,10 @@ function App() {
           <Route path="/profile" element={
             <ProfileInfo className="w-5/12 mx-3 border-r-[1px] border-l-[1px] border-slate-700">
                 <ProfileHeader/>
-                <Bg_ProfilePic imageUrl="/images/family.jpg"/>
+                <div>
+                  <Bg_ProfilePic />
+                  <ProfilePic imageUrl="/images/me.jpeg" className="w-32 h-32 ml-10 rounded-full border-4 border-black absolute -mt-16"/>
+                </div>
             </ProfileInfo>} />
         </Routes>
         <RightSide className="hidden lg:flex flex-col px-5 py-7 gap-5">
