@@ -20,6 +20,7 @@ import ProfileInfo from "./components/Pages/ProfileInfo"
 import ProfileHeader from "./components/ProfileHeader/ProfileHeader"
 import Bg_ProfilePic from "./components/BgPic/BgPic"
 import ProfilePic from "./components/ProfilePic/ProfilePic"
+import UserName from "./components/UserName/UserName"
 
 
 
@@ -84,6 +85,16 @@ function App() {
                 </div>
                 <div className="flex justify-end px-10 pt-5">
                   <Button type="button" id="BtnEditProfile" className="w-32 h-10 border-[1px] border-slate-600 rounded-full text-lg text-slate-300 font-semibold hover:cursor-pointer" value="Edit Profile"/>
+                </div>
+                <div className="ml-3">
+                  <div className="flex flex-row items-center mt-10 gap-3">
+                    <UserName text="Victoire Muvumbi" className="text-[#E6E9EA] font-semibold text-xl text-nowrap"/>
+                    <div className="flex flex-row gap-1 items-center border-[1px] border-slate-600 rounded-full h-6 px-3">
+                      <img src="/logo/verified.svg" alt="" className="w-5"/>
+                      <Button type="button" id="BtnGetVerified" value="Get verified" className="font-semibold text-slate-300"/>
+                    </div>  
+                  </div>
+                  <UserName text="@VMuvumbi" className="text-slate-600"/>
                 </div>
             </ProfileInfo>} />
         </Routes>

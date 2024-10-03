@@ -1,8 +1,10 @@
-import Text from "../Text/Text"
+interface userNameProps{
+    className:string;
+    text:string;
+}
 
-
-export default function UserName(){
+export default function UserName({className, text}:userNameProps){
     return(
-            <Text className="text-[#E6E9EA] font-extrabold text-2xl text-nowrap" text="Victoire Muvumbi"/>
+            <p className={className}>{text}</p>
     )
 }
