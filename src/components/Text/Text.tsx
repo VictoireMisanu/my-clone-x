@@ -6,7 +6,7 @@ interface TextProps{
 
 function Text ({text, className}:TextProps){
     return(
-        <span className={className}>{text}</span>
+        <div className={className}>{text}</div>
     )
 }
 

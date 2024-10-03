@@ -1,5 +1,5 @@
 //import { useState } from 'react'
-import Btn from "./components/Button/Button"
+import Button from "./components/Button/Button"
 import Item from "./components/RightSide/Items/Item"
 import RightSide from "./components/RightSide/RightSide"
 import NavComponent from "./components/SideNav/NavComponent/NavComponent"
@@ -24,6 +24,7 @@ import ProfilePic from "./components/ProfilePic/ProfilePic"
 
 
 
+
 function App() {
 
   return (
@@ -41,7 +42,7 @@ function App() {
                   <NavComponent src="/logo/list.svg" text="List"/>
                   <NavLink to="/profile"><NavComponent src="/logo/profile.svg" text="Profile"/></NavLink>
                   <NavComponent src="/logo/more.svg" text="More"/>
-                  <Btn type="button" id="BtnTweet" value="Tweet" className="text-xl text-white bg-TweetBtn rounded-2xl w-36 h-10"/>
+                  <Button type="button" id="ButtonTweet" value="Tweet" className="text-xl text-white bg-TweetBtn rounded-2xl w-36 h-10"/>
                 </div>
                 <div className="w-full">
                   <User/>
@@ -79,14 +80,17 @@ function App() {
                 <ProfileHeader/>
                 <div>
                   <Bg_ProfilePic />
-                  <ProfilePic imageUrl="/images/me.jpeg" className="w-32 h-32 ml-10 rounded-full border-4 border-black absolute -mt-16"/>
+                  <ProfilePic imageUrl="/images/me.jpeg" className="w-32 h-32 ml-10 rounded-full border-4 border-black absolute -mt-10"/>
+                </div>
+                <div className="flex justify-end px-10 pt-5">
+                  <Button type="button" id="BtnEditProfile" className="w-32 h-10 border-[1px] border-slate-600 rounded-full text-lg text-slate-300 font-semibold hover:cursor-pointer" value="Edit Profile"/>
                 </div>
             </ProfileInfo>} />
         </Routes>
         <RightSide className="hidden lg:flex flex-col px-5 py-7 gap-5">
                 <Item className="flex flex-row bg-Bg2 w-80 p-3 rounded-3xl">
                   <NavComponent src="/logo/search.svg"/>
-                  <Btn type="input" id="SearchZone" placeholder="Search Twitter" className="bg-Bg2 outline-none text-white"/>
+                  <Button type="input" id="SearchZone" placeholder="Search Twitter" className="bg-Bg2 outline-none text-white"/>
                 </Item>
                 <Item className="flex flex-col bg-Bg2 w-80 p-3 justify-between rounded-xl">
                   <Title/>
@@ -110,7 +114,7 @@ function App() {
                         <NavComponent src="/logo/verified.svg"/>
                       </div>
                     </TextPlusIcon>
-                    <Btn type="button" id="BtnTweet" value="Follow" className="text-sm text-Bg2 bg-white rounded-3xl w-24 h-7"/>
+                    <Button type="button" id="ButtonTweet" value="Follow" className="text-sm text-Bg2 bg-white rounded-3xl w-24 h-7"/>
                   </WhoBlock>
                   <WhoBlock>
                     <NavComponent src="/logo/cnn.svg"/>
@@ -123,7 +127,7 @@ function App() {
                         <NavComponent src="/logo/verified.svg"/>
                       </div>
                     </TextPlusIcon>
-                    <Btn type="button" id="BtnTweet" value="Follow" className="text-sm text-Bg2 bg-white rounded-3xl w-24 h-7"/>
+                    <Button type="button" id="BtnTweet" value="Follow" className="text-sm text-Bg2 bg-white rounded-3xl w-24 h-7"/>
                   </WhoBlock>
                   <WhoBlock>
                     <NavComponent src="/logo/twitterblue.svg"/>
@@ -136,7 +140,7 @@ function App() {
                         <NavComponent src="/logo/verified.svg"/>
                       </div>
                     </TextPlusIcon>
-                    <Btn type="button" id="BtnTweet" value="Follow" className="text-sm text-Bg2 bg-white rounded-3xl w-24 h-7"/>
+                    <Button type="button" id="ButtonTweet" value="Follow" className="text-sm text-Bg2 bg-white rounded-3xl w-24 h-7"/>
                   </WhoBlock>
         
                 

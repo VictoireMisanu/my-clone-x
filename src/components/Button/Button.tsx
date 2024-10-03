@@ -7,10 +7,10 @@ interface BtnProps{
 }
 
 
-function Btn({type, id, className, value, placeholder}:BtnProps){
+function Button({type, id, className, value, placeholder}:BtnProps){
     return(
         <input type={type} id={id} className={className} value={value} placeholder={placeholder}/>
     )
 }
 
-export default Btn
+export default Button
