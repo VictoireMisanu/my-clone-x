@@ -1,6 +1,7 @@
 import Arrow from "../Arrow/Arrow";
+import Num from "../Number/Number";
 import UserName from "../UserName/UserName";
-import Text from "../Text/Text";
+
 
 export default function ProfileHeader(){
     return(
@@ -8,10 +9,7 @@ export default function ProfileHeader(){
             <Arrow/>
             <div className="flex flex-col">
                 <UserName text="Victoire Muvumbi" className="text-[#E6E9EA] font-extrabold text-2xl text-nowrap"/>
-                <div className="flex flex-row text-gray-500 items-center gap-2">
-                    <small>0</small>
-                    <Text className="" text="post"/>
-                </div>
+                <Num num={0} text="post" className="flex flex-row text-gray-500 items-center gap-2"/>
             </div>
         </div>
     )

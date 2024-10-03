@@ -21,6 +21,7 @@ import ProfileHeader from "./components/ProfileHeader/ProfileHeader"
 import Bg_ProfilePic from "./components/BgPic/BgPic"
 import ProfilePic from "./components/ProfilePic/ProfilePic"
 import UserName from "./components/UserName/UserName"
+import Num from "./components/Number/Number"
 
 
 
@@ -95,6 +96,16 @@ function App() {
                     </div>  
                   </div>
                   <UserName text="@VMuvumbi" className="text-slate-600"/>
+                </div>
+                <div>
+                  <div className="flex flex-row ml-3 gap-1">
+                    <img src="/logo/calendar.svg" alt="" className=""/>
+                    <span className="text-slate-600">Joined December 2023</span>
+                  </div>
+                  <div className="flex flex-row gap-5 ml-3 mt-5">
+                    <Num num={4} text="Followings" className="flex flex-row text-white items-center gap-2"/>
+                    <Num num={2} text="Followers" className="flex flex-row text-white items-center gap-2"/>
+                  </div>
                 </div>
             </ProfileInfo>} />
         </Routes>
