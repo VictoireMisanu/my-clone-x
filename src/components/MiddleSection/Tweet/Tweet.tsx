@@ -1,44 +1,46 @@
-
-import NavComponent from "../../SideNav/NavComponent/NavComponent"
-//import NameText from "./NameText"
-import Text from "../../Text/Text"
+import CommentSection from "./CommentSection";
 import ImageTweet from "./ImageTweet";
 
 export interface TweetProps {
-    publisherName: string;
+    tweetId?: number;
+    profile:string;
+    name: string;
     username: string;
-    date: string;
-    avatarUrl: string;
+    createdAt: string;
+    likes:number;
+    retweets: number;
+    comments:number;
+    numberShare:number;
     content: string;
-    imageUrl?: string;
-    children: JSX.Element | JSX.Element[]
+    image?: string;
+    children?: JSX.Element | JSX.Element[]
     
 }
 
-const Tweet: React.FC<TweetProps> = ({publisherName, date, username, avatarUrl, content, imageUrl, children}) =>{
+const Tweet: React.FC<TweetProps> = ({name, profile, createdAt, username, content, image, likes, retweets, comments, numberShare}) =>{
+
+
     return(
         <div className="flex flex-row p-5">
-            <div className="">
-                <NavComponent src={avatarUrl} alt={`${username}’s avatar`} className="w-1/2"/>
-            </div>
             
-            <div className="flex flex-col w-full gap-5">
+            
+            <div className="flex flex-col w-full items-center gap-5">
                     <div className="flex flex-col gap-5">
-                        <div className="flex flex-row gap-1">
-                            <Text text={publisherName} className="font-semibold text-gray-200"/>
-                            <NavComponent src={"/logo/verified.svg"}/>
-                            <Text text={`@${username}`} className="font-extralight text-gray-500"/>
-                            <Text text={`.${date}`} className="font-extralight text-gray-500"/>
+                        <div className="flex flex-row items-center gap-2">
+                            <img src={profile} alt="" className="w-12 rounded-full"/>
+                            <p className="font-semibold text-nowrap text-gray-200">{name}</p>
+                            <img src={"/logo/verified.svg"}/>
+                            <p className="font-extralight text-gray-500">{`@${username}`}</p>
+                            <p className="font-extralight text-nowrap text-gray-500">{`.${createdAt}`}</p>
                         </div>
                         <div className="w-full">
-                            <Text text={content} className="font-light text-gray-300"/>
+                            <p className="font-light text-gray-300">{content}</p>
                         </div> 
                     </div>
-                    {imageUrl && <ImageTweet src={imageUrl} alt="Tweet image"/> }
-                    <div className="">
-                        {children}
-                    </div>
+                    {image && <ImageTweet src={image} alt="Tweet image" className="border-[1px] border-slate-500 rounded-md"/> }
+                    <CommentSection likes={likes} retweets={retweets} comments={comments} share={numberShare}/>
             </div>
+            
         </div>
     )
   }
