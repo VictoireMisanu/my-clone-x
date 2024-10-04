@@ -10,7 +10,7 @@ function User(){
             </div>
             <div className="flex flex-col">
                 <div className="flex flex-row gap-1">
-                    <a href="" className="text-gray-700 text-nowrap">{userConnected.name}</a>
+                    <Link to={`/${userConnected.username}`}><p className="text-gray-700 text-nowrap">{userConnected.name}</p></Link>
                     <img src="/logo/private.svg"/>
                 </div>
                 <div>
