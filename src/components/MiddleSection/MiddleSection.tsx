@@ -45,7 +45,7 @@ function MiddleSection ({className}:MiddleSectionProps){
         <div className={className}>
                 <Header />
                     <hr className="w-full border-gray-600"/>
-                    <EditTweet/>
+                    <EditTweet username={DB[1].username}/>
                     <hr className="w-full border-gray-600"/>
                     
                     {

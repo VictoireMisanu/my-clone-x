@@ -1,11 +1,17 @@
 import Button from "../../Button/Button"
+import DB from "../../../data"
+import { Link } from "react-router-dom"
 
-function EditTweet (){
+interface EditTweetProps{
+    username:string;
+}
+function EditTweet ({username}:EditTweetProps){
+    const userConnected = DB[1]
     return(
-       <div className="flex flex-col gap-5 mx-5 my-3">
+        <div className="flex flex-col gap-5 mx-5 my-3">
             <div className="flex flex-row gap-9 items-center w-3/5 h-10 mt-5">
-                <a href="#"><img src="/images/me.jpeg" alt=""className="w-20 rounded-full"/></a> 
-                <Button type="input" id="EditTweet" placeholder="What's happening?" className="bg-black text-white w-4/5 placeholder:text-2xl outline-none"/>
+            <Link to={`/${username}`}><img src={userConnected.profilePicture} alt=""className="w-20 rounded-full"/></Link>
+            <Button type="input" id="EditTweet" placeholder="What's happening?" className="bg-black text-white w-4/5 placeholder:text-2xl outline-none"/>
             </div>
             <div className="flex flex-row justify-between items-center h-10">
                 <div className="flex flex-row ml-20 gap-2">

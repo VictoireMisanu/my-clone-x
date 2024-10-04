@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import CommentSection from "./CommentSection";
 import ImageTweet from "./ImageTweet";
 
@@ -27,10 +28,10 @@ const Tweet: React.FC<TweetProps> = ({name, profile, createdAt, username, conten
             <div className="flex flex-col w-full items-center gap-5">
                     <div className="flex flex-col gap-5">
                         <div className="flex flex-row items-center gap-2">
-                            <img src={profile} alt="" className="w-12 rounded-full"/>
-                            <p className="font-semibold text-nowrap text-gray-200">{name}</p>
+                            <Link to={`/${username}`}><img src={profile} alt="" className="w-12 rounded-full"/></Link>
+                            <Link to={`/${username}`}><p className="font-semibold text-nowrap text-gray-200 hover:underline">{name}</p></Link>
                             <img src={"/logo/verified.svg"}/>
-                            <p className="font-extralight text-gray-500">{`@${username}`}</p>
+                            <Link to={`/${username}`}><p className="font-extralight text-gray-500 hover:text-white">{`@${username}`}</p></Link>
                             <p className="font-extralight text-nowrap text-gray-500">{`.${createdAt}`}</p>
                         </div>
                         <div className="w-full">

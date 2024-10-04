@@ -5,6 +5,7 @@
       name: 'Christian Mwanya',
       bio: 'Tech enthusiast, coffee lover, and software engineer. Always exploring new ideas and trends in tech.',
       profilePicture: '/images/chrisM.jpg',
+      creationAccountDate:'Joined December 2023',
       followersCount: 1200,
       followingCount: 800,
       tweets: [
@@ -56,6 +57,7 @@
         name: 'Victoire Muvumbi',
         bio:  'Tech enthusiast and coffee lover. Tweets about tech, travel, and life.',
         profilePicture: '/images/me.jpeg',
+        creationAccountDate:'Joined January 2023',
         followersCount: 250,
         followingCount: 180,
         tweets: [
