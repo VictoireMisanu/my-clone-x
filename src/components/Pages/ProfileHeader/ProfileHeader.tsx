@@ -1,7 +1,7 @@
 import Arrow from "../Arrow/Arrow";
 import Num from "../Number/Number";
 import UserName from "../UserName/UserName";
-import DB from "../../data"
+import DB from "../../../data"
 import { useParams } from "react-router-dom";
 
 

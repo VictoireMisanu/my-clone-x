@@ -1,11 +1,11 @@
 import { useParams } from "react-router-dom";
 import Button from "../Button/Button";
-import ProfileHeader from "../ProfileHeader/ProfileHeader";
-import ProfilePic from "../ProfilePic/ProfilePic";
-import UserName from "../UserName/UserName";
+import ProfileHeader from "./ProfileHeader/ProfileHeader";
+import ProfilePic from "./ProfilePic/ProfilePic";
+import UserName from "./UserName/UserName";
 import DB from "../../data"
 import Tweet from "../MiddleSection/Tweet/Tweet";
-import BackgroundPic from "../BackgroundPicture/Background";
+import BackgroundPic from "./BackgroundPicture/Background";
 interface ProfileInfoProps {
     className?:string;
 }
