@@ -35,7 +35,7 @@ export default function ProfileInfo({className}:ProfileInfoProps){
                       <Button type="button" id="BtnGetVerified" value="Get verified" className="font-semibold text-slate-300"/>
                     </div>  
                   </div>
-                  <UserName text={userFound[0].username} className="text-slate-600"/>
+                  <UserName text={`@${userFound[0].username}`} className="text-slate-600"/>
                 </div>
                 <div className="mb-5">
                   <div className="flex flex-row ml-3 gap-1">

@@ -10,7 +10,7 @@ interface PropsNavComponent{
 
 function NavComponent ({src, text}: PropsNavComponent){
     return(
-        <div className="flex flex-row items-center gap-5">
+        <div className=" py-2 px-2 flex flex-row items-center gap-5 rounded-full hover:bg-BgProfil">
                 <a href="#"><img src={src} alt=""/></a>
                 <a href="#" className="text-white">{text}</a>
             </div>
