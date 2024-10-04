@@ -1,5 +1,5 @@
-import NavComponent from "../../SideNav/NavComponent/NavComponent"
-import Text from "../../Text/Text"
+import CommentSectionContent from "./CommentSectionContent";
+
 interface CommentSectionProps{
     likes: number;
     comments: number;
@@ -10,22 +10,12 @@ interface CommentSectionProps{
 function CommentSection ({likes, comments, retweets, share}:CommentSectionProps){
     return(
         <div className="flex flex-row gap-10">
-            <div className="flex flex-row w-1/4 items-center">
-                <NavComponent src="/logo/comment.svg"/>
-                <Text text={comments} className="font-extralight text-gray-500"/>
-            </div>
-            <div className="flex flex-row w-1/4 items-center">
-                <NavComponent src="/logo/retweets.svg"/>
-                <Text text={retweets} className="font-extralight text-gray-500"/>
-            </div>
-            <div className="flex flex-row w-1/4 items-center">
-                <NavComponent src="/logo/like.svg"/>
-                <Text text={likes} className="font-extralight text-gray-500"/>
-            </div>
-            <div className="flex flex-row w-1/4 items-center">
-                <NavComponent src="/logo/share.svg"/>
-                <Text text={share} className="font-extralight text-gray-500"/>
-            </div>
+
+            <CommentSectionContent src="/logo/comment.svg" text={comments} className="flex flex-row w-1/4 items-center gap-3 font-extralight text-gray-500 hover:text-blue-700 hover:cursor-pointer hue-rotate-90 saturate-500"/>
+            <CommentSectionContent src="/logo/like.svg" text={likes} className="flex flex-row w-1/4 items-center gap-3 font-extralight text-gray-500 hover:text-rose-800 hover:cursor-pointer"/>
+            <CommentSectionContent src="/logo/retweets.svg" text={retweets} className="flex flex-row w-1/4 items-center gap-3 font-extralight text-gray-500 hover:text-green-700 hover:cursor-pointer"/>
+            <CommentSectionContent src="/logo/share.svg" text={share} className="flex flex-row w-1/4 items-center gap-3 font-extralight text-gray-500 hover:text-blue-700 hover:cursor-pointer"/>
+            
         </div>
     )
 }
