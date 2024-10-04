@@ -13,7 +13,7 @@ import DB from "../../data"
 function SideNav (){
     const userConnected = DB[1]
     return(
-        <div className="mx-10 flex flex-col justify-between mb-3">
+        <div className="mx-10 flex flex-col gap-20 mb-3">
             <div className="flex flex-col px-10 py-7 gap-8 justify-between">
                 <NavComponent src="/logo/twitter.svg"/>
                   <NavComponent src="/logo/logoHome.svg" text="Home"/>

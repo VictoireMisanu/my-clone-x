@@ -3,7 +3,7 @@ interface BgImageProps{
     imageUrl?:string;
     
 }
-export default function Bg_ProfilePic({imageUrl}:BgImageProps){
+export default function BackgroundPic({imageUrl}:BgImageProps){
     return(
         <div>
             { imageUrl ?

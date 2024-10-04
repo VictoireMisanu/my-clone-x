@@ -16,10 +16,10 @@ import Text from "../Text/Text"
 function RightSide (){
     return(
         <div className="hidden lg:flex flex-col px-5 py-7 gap-5">
-                            <Item className="flex flex-row bg-Bg2 w-80 p-3 rounded-3xl">
-                  <NavComponent src="/logo/search.svg"/>
-                  <Button type="input" id="SearchZone" placeholder="Search Twitter" className="bg-Bg2 outline-none text-white"/>
-                </Item>
+            <Item className="flex flex-row bg-Bg2 w-80 p-3 rounded-3xl">
+                <NavComponent src="/logo/search.svg"/>
+                <Button type="input" id="SearchZone" placeholder="Search Twitter" className="bg-Bg2 outline-none text-white"/>
+            </Item>
                 <Item className="flex flex-col bg-Bg2 w-80 p-3 justify-between rounded-xl">
                   <Title/>
                   <ItemsContent/>

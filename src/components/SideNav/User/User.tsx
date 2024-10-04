@@ -1,22 +1,24 @@
-import NavComponent from "../NavComponent/NavComponent"
+import DB from "../../../data"
+import { Link } from "react-router-dom"
 
 function User(){
+    const userConnected = DB[1]
     return(
-        <div className="flex flex-row justify-between">
+        <div className="flex flex-row justify-between gap-5">
             <div>
-                <a href="#"><img src="/logo/profilepic.svg" alt=""/></a>
+            <Link to={`/${userConnected.username}`}><img src={userConnected.profilePicture} alt=""className="w-16 rounded-full"/></Link>
             </div>
             <div className="flex flex-col">
                 <div className="flex flex-row gap-1">
-                    <a href="" className="text-gray-700 ">Bradley Ortiz</a>
-                    <NavComponent src="/logo/private.svg"/>
+                    <a href="" className="text-gray-700 text-nowrap">{userConnected.name}</a>
+                    <img src="/logo/private.svg"/>
                 </div>
                 <div>
-                    <span className="text-gray-700">@Bradley_</span>
+                    <span className="text-gray-700 text-nowrap">@{userConnected.username}</span>
                 </div>
             </div>
             <div>
-                <NavComponent src="/logo/moreTrend.svg"/>
+                <img src="/logo/moreTrend.svg"/>
             </div>
         </div>
     )
