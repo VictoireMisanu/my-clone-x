@@ -23,8 +23,6 @@ const Tweet: React.FC<TweetProps> = ({name, profile, createdAt, username, conten
 
     return(
         <div className="flex flex-row p-5">
-            
-            
             <div className="flex flex-col w-full items-center gap-5">
                     <div className="flex flex-col gap-5">
                         <div className="flex flex-row items-center gap-2">

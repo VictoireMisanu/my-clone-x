@@ -7,6 +7,7 @@ import ProfileHeader from "../ProfileHeader/ProfileHeader";
 import ProfilePic from "../ProfilePic/ProfilePic";
 import UserName from "../UserName/UserName";
 import DB from "../../data"
+import Tweet from "../MiddleSection/Tweet/Tweet";
 interface ProfileInfoProps {
     className?:string;
 }
@@ -49,6 +50,18 @@ export default function ProfileInfo({className}:ProfileInfoProps){
                   </div>
                 </div>
                 <NavCenter/>
+                {
+                  userFound[0].tweets.map((tweet)=>(
+                    <>
+                                <Tweet
+                                    profile={userFound[0].profilePicture} name={userFound[0].name} username={userFound[0].username} 
+                                    createdAt={tweet.createdAt} content={tweet.content} image={tweet.image}
+                                    likes={tweet.likes} comments={tweet.comments} retweets={tweet.retweets} numberShare={tweet.numberShare}
+                                    />
+                                <hr className="w-full border-gray-600"/>
+                            </>
+                  ))
+                }
                 <hr className="w-full border-gray-600"/>
         </div>
     )
