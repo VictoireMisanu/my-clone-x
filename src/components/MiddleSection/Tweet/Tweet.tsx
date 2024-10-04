@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import CommentSection from "./CommentSection";
 import ImageTweet from "./ImageTweet";
+import ReactPlayer from "react-player";
 
 export interface TweetProps {
     tweetId?: number;
@@ -14,11 +15,12 @@ export interface TweetProps {
     numberShare:number;
     content: string;
     image?: string;
+    videoUrl?:string;
     children?: JSX.Element | JSX.Element[]
     
 }
 
-const Tweet: React.FC<TweetProps> = ({name, profile, createdAt, username, content, image, likes, retweets, comments, numberShare}) =>{
+const Tweet: React.FC<TweetProps> = ({name, profile, createdAt, username, content, image, videoUrl, likes, retweets, comments, numberShare}) =>{
 
 
     return(
@@ -36,13 +38,15 @@ const Tweet: React.FC<TweetProps> = ({name, profile, createdAt, username, conten
                             <p className="font-light text-gray-300">{content}</p>
                         </div> 
                     </div>
-                    {image && <ImageTweet src={image} alt="Tweet image" className="border-[1px] border-slate-500 rounded-md"/> }
+                    {(image) ? <ImageTweet src={image} alt="Tweet image" className="border-[1px] border-slate-500 rounded-md"/> :
+                        (videoUrl) ? <ReactPlayer url={videoUrl} controls width="100%" height="auto"/>:" "
+                    }
                     <CommentSection likes={likes} retweets={retweets} comments={comments} share={numberShare}/>
             </div>
             
         </div>
     )
-  }
+}
 
 
 export default Tweet

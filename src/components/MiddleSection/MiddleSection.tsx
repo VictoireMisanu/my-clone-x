@@ -36,7 +36,8 @@ function MiddleSection ({className}:MiddleSectionProps){
               numberComment: tweet.comments,
               numberRetweet: tweet.retweets,
               numberShare: tweet.numberShare,
-              image: tweet.image
+              image: tweet.image,
+              video:tweet.videoUrl
             }))
           )
         );
@@ -53,7 +54,7 @@ function MiddleSection ({className}:MiddleSectionProps){
                             <>
                                 <Tweet key={index}
                                     profile={tweet.avatar} name={tweet.name} username={tweet.username} 
-                                    createdAt={tweet.createdAt} content={tweet.content} image={tweet.image}
+                                    createdAt={tweet.createdAt} content={tweet.content} image={tweet.image} videoUrl={tweet.video}
                                     likes={tweet.numberLike} comments={tweet.numberComment} retweets={tweet.numberRetweet} numberShare={tweet.numberShare}
                                     />
                                 <hr className="w-full border-gray-600"/>
