@@ -6,6 +6,8 @@ import UserName from "./UserName/UserName";
 import DB from "../../data"
 import Tweet from "../MiddleSection/Tweet/Tweet";
 import BackgroundPic from "./BackgroundPicture/Background";
+// import MiddleNav from "./MiddleNavigation/MiddleNav";
+import { useState } from "react";
 interface ProfileInfoProps {
     className?:string;
 }
@@ -16,7 +18,36 @@ export default function ProfileInfo({className}:ProfileInfoProps){
 
     const {username} = useParams()
     const userFound = DB.filter((user)=> user.username === username )
-    console.log(userFound);
+    
+    const [posts, setPost] = useState(true)
+    const [replies, setReplies] = useState(false)
+    const [highLights, setHighLights] = useState(false)
+    const [articles, setArticles] = useState(false)
+    const [medias, setMedias] = useState(false)
+    function showReplies(){
+      setReplies(!replies)
+      setPost(!posts)
+      setHighLights(highLights)
+      setArticles(articles)
+      setMedias(medias)
+    }
+    function showPosts(){
+      setReplies(replies)
+      setPost(posts)
+    }
+    // function showHighLights(){
+    //   setReplies(!replies)
+    //   setPost(!post)
+    // }
+    // function showHighArticles(){
+    //   setReplies(!replies)
+    //   setPost(!post)
+    // }
+   
+    // function showMedia(){
+    //   setReplies(!replies)
+    //   setPost(!post)
+    // }
     return(
         <div className={className}>
             <ProfileHeader/>
@@ -54,27 +85,39 @@ export default function ProfileInfo({className}:ProfileInfoProps){
                   </div>
                 </div>
                 <div>
-                  <ul className="flex flex-row justify-around font-bold text-lg text-white ">
-                    <li className="p-5 cursor-pointer hover:bg-slate-900 border-b-4 border-blue-700">Posts</li>
-                    <li className="p-5 cursor-pointer hover:bg-slate-900">Replies</li>
-                    <li className="p-5 cursor-pointer hover:bg-slate-900">HighLights</li>
-                    <li className="p-5 cursor-pointer hover:bg-slate-900">Articles</li>
-                    <li className="p-5 cursor-pointer hover:bg-slate-900">Media</li>
-                  </ul>
+                <ul className="flex flex-row justify-around font-bold text-lg text-white ">
+                  <li className="p-5 cursor-pointer hover:bg-slate-900 border-b-4 border-blue-700" onClick={showPosts}>Posts</li>
+                  <li className="p-5 cursor-pointer hover:bg-slate-900"  onClick={showReplies}>Replies</li>
+                  <li className="p-5 cursor-pointer hover:bg-slate-900">HighLights</li>
+                  <li className="p-5 cursor-pointer hover:bg-slate-900">Articles</li>
+                  <li className="p-5 cursor-pointer hover:bg-slate-900">Media</li>
+                </ul>
                   <hr className="w-full border-gray-600"/>
                 </div>
                 {
                   userFound[0].tweets.map((tweet)=>(
-                    <>
+                    <div className={posts? "block" : replies? "hidden" : ' '}>
                                 <Tweet
                                     profile={userFound[0].profilePicture} name={userFound[0].name} username={userFound[0].username} 
-                                    createdAt={tweet.createdAt} content={tweet.content} image={tweet.image}
+                                    createdAt={tweet.createdAt} content={tweet.content} image={tweet.image} videoUrl={tweet.videoUrl}
                                     likes={tweet.likes} comments={tweet.comments} retweets={tweet.retweets} numberShare={tweet.numberShare}
                                     />
                                 <hr className="w-full border-gray-600"/>
-                            </>
+                            </div>
                   ))
                 }
+                <div className={replies? "block" : "hidden"}>
+                  <p className="text-white">Replies</p>
+                </div>
+                <div>
+                  <p className={replies? "hidden" : "block text-white"}>HighLights</p>
+                </div>
+                <div>
+                  <p className={replies? "hidden" : "block text-white"}>Articles</p>
+                </div>
+                <div>
+                  <p className={replies? "hidden" : "block text-white"}>Media</p>
+                </div>
                 <hr className="w-full border-gray-600"/>
         </div>
     )

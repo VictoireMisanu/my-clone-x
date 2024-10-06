@@ -61,19 +61,6 @@ function MiddleSection ({className}:MiddleSectionProps){
                             </>
                         ))
                     }
-                        
-                    {/* <hr className="w-full border-gray-600"/>
-                    <Tweet publisherName="The New York Times" username="anytimes" date="2h" avatarUrl="/logo/anytime.svg" content='Gardening boomed during the pandemic. Six Black writers share how it has helped them re-establish, and reimagine, a connection to cultivation and the land' imageUrl="/images/imagetweet.png">
-                      <CommentSection likes={482} comments={19} retweets={482} share={0}/>
-                    </Tweet>
-                    <hr className="w-full border-gray-600"/>
-                    <Tweet publisherName="Twitter" username="Twitter" date="Oct 4" avatarUrl="/logo/twitterblue.svg" content='Hello litterally everyone'>
-                      <CommentSection likes={122} comments={22} retweets={55} share={65}/>
-                    </Tweet>
-                    <hr className="w-full border-gray-600"/>
-                    <Tweet publisherName="Twitter" username="Twitter" date="Oct 4" avatarUrl="/logo/twitterblue.svg" content='Hello litterally everyone'>
-                      <CommentSection likes={122} comments={22} retweets={55} share={65}/>
-                    </Tweet> */}
         </div>
     )
 }

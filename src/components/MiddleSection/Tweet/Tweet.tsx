@@ -22,7 +22,6 @@ export interface TweetProps {
 
 const Tweet: React.FC<TweetProps> = ({name, profile, createdAt, username, content, image, videoUrl, likes, retweets, comments, numberShare}) =>{
 
-
     return(
         <div className="flex flex-row p-5">
             <div className="flex flex-col w-full items-center gap-5">
