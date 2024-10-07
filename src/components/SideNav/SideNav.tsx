@@ -25,7 +25,8 @@ function SideNav ({className}:SideNavProps){
                     <NavLink to={`/${userConnected.username}`}><NavComponent src="/logo/profile.svg" text="Profile"/></NavLink>
                     <NavComponent src="/logo/more.svg" text="More"/>
                   </div>
-                  <Button type="button" id="ButtonTweet" value="Tweet" className="text-xl text-white bg-TweetBtn rounded-2xl w-36 h-10 hover:cursor-pointer"/>
+                  <Button type="button" id="ButtonTweet" value="Tweet" className=" md:lg:text-xl md:lg:text-white md:lg:bg-TweetBtn md:lg:rounded-2xl md:lg:w-36 md:lg:h-10 hover:cursor-pointer"/>
+                  <a href="#" className="w-16 h-16 rounded-full bg-TweetBtn flex justify-center items-center md:lg:hidden"><img src="/logo/twitter.svg" className="w-12 h-12"/></a>
                 </div>
                 <div className="w-full">
                   <User/>

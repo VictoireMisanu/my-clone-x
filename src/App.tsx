@@ -12,11 +12,11 @@ function App() {
     
   <BrowserRouter>
     <div className="bg-Bg1 flex flex-row justify-center">
-        <SideNav className="mx-10 flex flex-col gap-10 mb-3"/>
+        <SideNav className="hidden md:lg:mx-10 md:lg:flex flex-col gap-10 mb-3"/>
         <Routes>
             <Route path="/">
               <Route index element={
-                  <MiddleSection className="w-5/12 mx-3 border-r-[1px] border-l-[1px] border-slate-700"/>
+                  <MiddleSection className="m-auto w-full md:lg:w-5/12 mx-3 border-r-[1px] border-l-[1px] border-slate-700"/>
               }/>
             </Route>
           <Route path="/:username" element={
